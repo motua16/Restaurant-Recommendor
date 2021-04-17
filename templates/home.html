@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurant Recommendation</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+    <div class="login">
+        <h1>Restaurants Recommendation, Bangalore</h1>
+        <p>The result is based on reviews of over 6500 restaurants. Kindly enter the name of the restaurant you liked!</p>
+
+        <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('recommend')}}" method="post">
+            <input type="text" name="Restaurant" placeholder="Restaurant" required="required" />
+
+            <button type="submit" class="btn btn-primary btn-block btn-large">Submit</button>
+        </form>
+
+        <br>
+        <br>
+        {{ prediction_text }}
+
+    </div>
+
+
+{% for table in tables %}
+
+{{ table|safe }}
+{% endfor %}
+
+</body>
+</html>
