@@ -4,6 +4,10 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 
 def cosine_similarity_n_space(m1, m2, batch_size=100):
+
+    '''
+        function to calculate cosine similarity without memory outages
+    '''
     assert m1.shape[1] == m2.shape[1] and isinstance(batch_size, int) == True
 
     ret = np.ndarray((m1.shape[0], m2.shape[0]))
