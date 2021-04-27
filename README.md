@@ -1,6 +1,6 @@
 # Restaurant-Recommendor
 
-Recommending new Restaurants based on one you liked for Bangalore. This application recommends you restaurants based on the similarity in reviews by people. The dataset used is from Zomato which can be found [here](https://www.kaggle.com/himanshupoddar/zomato-bangalore-restaurants). 
+Recommending new Restaurants based on one you liked for Bangalore. This application recommends you restaurants based on the similarity in reviews. The dataset used is from Zomato which can be found [here](https://www.kaggle.com/himanshupoddar/zomato-bangalore-restaurants). 
 
 __Check out the live version of this app [here](https://glacial-bastion-35496.herokuapp.com/).__
 
